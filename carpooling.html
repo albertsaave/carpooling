@@ -1,0 +1,23 @@
+<head>
+  <title>carpooling</title>
+</head>
+
+<body>
+  <!-- <div class="container"> -->
+    <h1 align="center">Carpooling app</h1>
+
+    <form class="new-car">
+      <input type="text" name="time" placeholder="time">
+      <input type="text" name="route" placeholder="route">
+      <button type="submit" >Add</button>
+    </form>
+    {{#each cars}}
+    {{>car}}
+    {{/each}}
+  <!-- </div> -->
+
+</body>
+
+<template name="car">
+<li class="car"> <span class="text">{{route}} @ <strong>{{time}}</strong></span> </li>
+</template>
